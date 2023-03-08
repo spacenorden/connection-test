@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>QlikSenseRestClient</id>
+    <version>1.14.1</version>
+    <title>Qlik.Sense.RestClient</title>
+    <authors>Øystein Kolsrud</authors>
+    <owners>Øystein Kolsrud</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <readme>docs\README.md</readme>
+    <projectUrl>https://github.com/kolsrud/qlik_rest_sdk</projectUrl>
+    <description>This is a basic SDK for Qlik Sense REST access with authentication configuration built along the same line as the .Net SDK for the Engine API.</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright © 2018-2023 Øystein Kolsrud</copyright>
+    <tags>qlik sense rest</tags>
+    <dependencies>
+      <dependency id="Newtonsoft.Json" version="11.0.1" />
+    </dependencies>
+  </metadata>
+</package>
