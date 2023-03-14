@@ -19,9 +19,15 @@ QlikView 11.0 Type Library                        15B258E8-415E-11D1-934D-004033
   QlikView 11.0 Type Library : Version b.0        15B258E8-415E-11D1-934D-0040333C91CC
     win32 in SWDTOOLS Qv.exe
   QlikView 12.70 Type Library : Version c.46      15B258E8-415E-11D1-934D-0040333C91CC
-    win32 in Programme (x86) ocx \2
-	win64 in SWDTOOLS ocx \2
+    win32 in Program Files (x86) ocx \2
+	  win64 in SWDTOOLS ocx \2
 
 
 
 local:
+
+QlikOCX ActiveX Control module                    C6317543-2616-4D80-9F3D-4732CFF1F420
+  QlikOCX ActiveX Control module : Version c.3c   C6317543-2616-4D80-9F3D-4732CFF1F420
+	  win32 in connection-test ocx
+	QlikOCX ActiveX Control module : Version c.46   C6317543-2616-4D80-9F3D-4732CFF1F420
+	  win32 in Program Files ocx
