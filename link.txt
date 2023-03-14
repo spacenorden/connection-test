@@ -1,0 +1,5 @@
+qvp://cpmi-rpt-host.prd.digital.gbm.cloud.hk.hsbc/CUPID(Cupid Dashboard.qvw
+Trade Details
+Year: 2023
+Month: Jan
+Day: 1
