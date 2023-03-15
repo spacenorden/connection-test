@@ -2,24 +2,39 @@ $oMyError = ObjEvent("AutoIt.Error", "MyErrFunc")
 
 $Qview = ObjCreate("QlikTech.QlikView")
 
-if IsObj($Qview) Then
-	$Qview.MsgBox(0, "", $Qview.OSName)
-Else
-	$Qview.MsgBox(0, "", "Failed to open QlikView Client")
-	Exit (1)
-EndIf
-
-
 $Qview.MsgBox("QlikView Messagebox Qv_Version " & $Qview.QvVersion )
 
+;if IsObj($Qview) Then
+;	$Qview.MsgBox(0, "", $Qview.OSName)
+;Else
+;	$Qview.MsgBox(0, "", "Failed to open QlikView Client")
+;	Exit (1)
+;EndIf
+
+;$Qview.OpenDoc("C:\HSBC\connection-test\Data Visualization.qvw", "", "")
 $Qview.OpenDoc("qvp://cpmi-rpt-host.prd.digital.gbm.cloud.hk.hsbc/CUPID/Cupid Dashboard.qvw")
 
-WinSetState("QlikView", "", @SW_MAXIMIZE)
+;WinSetState("QlikView", "", @SW_MAXIMIZE)
 
 $ActiveDoc = $Qview.ActiveDocument
 
+$Sheet = $ActiveDoc.ActivateSheet("Tables")
+
+;$qStraightTableBoxes = $Sheet.GetStraightTableBoxes
+$qStraightTableBoxes = $ActiveDoc.Sheets("Trade Details").GetStraightTableBoxes
+$qStraightTableBox = $qStraightTableBoxes[0]
+;$qStraightTableBox = $ActiveDoc.GetSheetObject("CH26")
+
+
+$Qview.MsgBox("No of Rows: " & $qStraightTableBox.GetNoOfRows)
+ConsoleWrite("Row Count: " & $qStraightTableBox.GetRowCount)
+
+$qStraightTableBox.ExportEx("C:\HSBC\test.csv", 1, False, ";")
+
+
+
 ; INSERT HERE and start every call with "QvDoc."
-Local $Sheet, $obj, $w, $h
+Local $Sheet, $qStraightTableBox, $obj, $w, $h
 
 $Sheet = $ActiveDoc.ActivateSheet("DataSheet")
 
@@ -71,4 +86,4 @@ Func MyErrFunc()
 	  "err.helpcontext is: "    & @TAB & $oMyError.helpcontext)
 	SetError(1)  ; to check for after this function returns
 	Exit
-  EndFunc
+EndFunc
