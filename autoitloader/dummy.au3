@@ -1,8 +1,10 @@
 $oMyError = ObjEvent("AutoIt.Error", "MyErrFunc")
 
-$Qview = ObjCreate("QlikTech.QlikView")
+;$Qview = ObjCreate("QlikTech.QlikView")
+$Qview = ObjCreate("QlikTech.QlikOCXCtrl")
 
-$Qview.MsgBox("QlikView Messagebox Qv_Version " & $Qview.QvVersion )
+;app only:
+;$Qview.MsgBox("QlikView Messagebox Qv_Version " & $Qview.QvVersion )
 
 ;if IsObj($Qview) Then
 ;	$Qview.MsgBox(0, "", $Qview.OSName)
@@ -12,7 +14,9 @@ $Qview.MsgBox("QlikView Messagebox Qv_Version " & $Qview.QvVersion )
 ;EndIf
 
 ;$Qview.OpenDoc("C:\HSBC\connection-test\Data Visualization.qvw", "", "")
-$Qview.OpenDoc("qvp://cpmi-rpt-host.prd.digital.gbm.cloud.hk.hsbc/CUPID/Cupid Dashboard.qvw")
+;$Qview.OpenDocument("C:\HSBC\connection-test\Data Visualization.qvw", "", "")
+;$Qview.OpenDoc("qvp://cpmi-rpt-host.prd.digital.gbm.cloud.hk.hsbc/CUPID/Cupid Dashboard.qvw")
+$Qview.OpenDocument("qvp://cpmi-rpt-host.prd.digital.gbm.cloud.hk.hsbc/CUPID/Cupid Dashboard.qvw")
 
 ;WinSetState("QlikView", "", @SW_MAXIMIZE)
 
@@ -20,13 +24,13 @@ $ActiveDoc = $Qview.ActiveDocument
 
 $Sheet = $ActiveDoc.ActivateSheet("Tables")
 
-;$qStraightTableBoxes = $Sheet.GetStraightTableBoxes
-$qStraightTableBoxes = $ActiveDoc.Sheets("Trade Details").GetStraightTableBoxes
+$qStraightTableBoxes = $Sheet.GetStraightTableBoxes
+;$qStraightTableBoxes = $ActiveDoc.Sheets("Trade Details").GetStraightTableBoxes
 $qStraightTableBox = $qStraightTableBoxes[0]
 ;$qStraightTableBox = $ActiveDoc.GetSheetObject("CH26")
 
 
-$Qview.MsgBox("No of Rows: " & $qStraightTableBox.GetNoOfRows)
+;$Qview.MsgBox("No of Rows: " & $qStraightTableBox.GetNoOfRows)
 ConsoleWrite("Row Count: " & $qStraightTableBox.GetRowCount)
 
 $qStraightTableBox.ExportEx("C:\HSBC\test.csv", 1, False, ";")
