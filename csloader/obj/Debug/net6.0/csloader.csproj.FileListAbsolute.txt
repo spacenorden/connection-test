@@ -1,0 +1,15 @@
+C:\Users\D991961\Work\csloader\bin\Debug\net6.0\csloader.exe
+C:\Users\D991961\Work\csloader\bin\Debug\net6.0\csloader.deps.json
+C:\Users\D991961\Work\csloader\bin\Debug\net6.0\csloader.runtimeconfig.json
+C:\Users\D991961\Work\csloader\bin\Debug\net6.0\csloader.dll
+C:\Users\D991961\Work\csloader\bin\Debug\net6.0\ref\csloader.dll
+C:\Users\D991961\Work\csloader\bin\Debug\net6.0\csloader.pdb
+C:\Users\D991961\Work\csloader\obj\Debug\net6.0\csloader.csproj.AssemblyReference.cache
+C:\Users\D991961\Work\csloader\obj\Debug\net6.0\csloader.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\D991961\Work\csloader\obj\Debug\net6.0\csloader.AssemblyInfoInputs.cache
+C:\Users\D991961\Work\csloader\obj\Debug\net6.0\csloader.AssemblyInfo.cs
+C:\Users\D991961\Work\csloader\obj\Debug\net6.0\csloader.csproj.CoreCompileInputs.cache
+C:\Users\D991961\Work\csloader\obj\Debug\net6.0\csloader.dll
+C:\Users\D991961\Work\csloader\obj\Debug\net6.0\ref\csloader.dll
+C:\Users\D991961\Work\csloader\obj\Debug\net6.0\csloader.pdb
+C:\Users\D991961\Work\csloader\obj\Debug\net6.0\csloader.genruntimeconfig.cache
